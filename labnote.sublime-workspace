@@ -1,0 +1,586 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"de",
+				"DEBUG"
+			],
+			[
+				"pa",
+				"page"
+			],
+			[
+				"S",
+				"StaticPageAdmin"
+			],
+			[
+				"C",
+				"CharField"
+			],
+			[
+				"flat",
+				"flatpage"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"30px",
+				"30px"
+			],
+			[
+				"bra",
+				"brand"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"b",
+				"brand_name"
+			],
+			[
+				"co",
+				"collection"
+			],
+			[
+				"ite",
+				"items"
+			],
+			[
+				"i",
+				"items"
+			],
+			[
+				"c",
+				"collections"
+			],
+			[
+				"is",
+				"is_active"
+			],
+			[
+				"Р",
+				"Размеры"
+			],
+			[
+				"si",
+				"size"
+			],
+			[
+				"M",
+				"Model"
+			],
+			[
+				"B",
+				"BrandAdmin"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"car",
+				"carousel-container"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"mi",
+				"min-height"
+			],
+			[
+				"u",
+				"urls"
+			],
+			[
+				"ur",
+				"urls"
+			],
+			[
+				"con",
+				"contacts"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"a",
+				"a	Tag"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"switch",
+				"switch-on"
+			],
+			[
+				"m",
+				"margin"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"cu",
+				"current_collection"
+			],
+			[
+				"I",
+				"Item"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"Auth",
+				"AuthorAdmin"
+			],
+			[
+				"Author",
+				"Author"
+			],
+			[
+				"A",
+				"AuthorInline"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"fo",
+				"form	Tag"
+			],
+			[
+				"static",
+				"static"
+			],
+			[
+				"ut",
+				"utf-8"
+			],
+			[
+				"cm",
+				"cmdb_No"
+			],
+			[
+				"Per",
+				"PersonAdmin"
+			],
+			[
+				"__",
+				"__unicode__"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"ta",
+				"target	Attr"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"f",
+				"first_name"
+			],
+			[
+				"s",
+				"second_name"
+			],
+			[
+				"g",
+				"graduate"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 369.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: <?php else: ?>"
+			],
+			[
+				"",
+				"Indentation: Convert to Spaces"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/bi/git/labnote_env/labnote"
+	],
+	"file_history":
+	[
+		"/home/bi/git/sharman_env/src/sharman/contacts/templates/contacts.html",
+		"/home/bi/git/sharman_env/src/sharman/templates/collection.html",
+		"/home/bi/git/sharman_env/src/sharman/sharman/urls.py",
+		"/home/bi/git/sharman_env/src/sharman/templates/brand.html",
+		"/home/bi/git/sharman_env/src/sharman/core/views.py",
+		"/home/bi/git/sharman_env/src/sharman/core/models.py",
+		"/home/bi/git/sharman_env/src/sharman/contacts/models.py",
+		"/home/bi/git/sharman_env/src/sharman/sharman/settings.py",
+		"/home/bi/git/sharman_env/src/sharman/static/css/style.css",
+		"/home/bi/git/sharman_env/src/sharman/templates/about.html",
+		"/home/bi/git/sharman_env/src/sharman/templates/item.html",
+		"/home/bi/git/sharman_env/src/sharman/core/admin.py",
+		"/home/bi/git/sharman_env/src/sharman/templates/base.html",
+		"/home/bi/git/sharman_env/src/sharman/static/css/lightbox.css",
+		"/home/bi/git/sharman_env/src/sharman/contacts/admin.py",
+		"/home/bi/git/sharman_env/src/sharman/contacts/views.py",
+		"/home/bi/git/sharman_env/src/sharman/templates/index.html",
+		"/home/bi/git/sharman_env/src/sharman/templates/brand_collection.html",
+		"/home/bi/git/sharman_env/src/sharman/templates/main.html",
+		"/home/bi/git/sharman_env/src/sharman/static/js/script.js",
+		"/home/bi/git/sharman_env/src/sharman/contacts/urls.py",
+		"/home/bi/git/sharman_env/src/sharman/templates/contacts/contacts.html",
+		"/home/bi/git/sharman_env/src/sharman/templates/contacts/about.html",
+		"/home/bi/git/sharman_env/src/sharman/static/js/jquery-2.1.4.min.js",
+		"/home/bi/git/sharman_env/src/readme.txt",
+		"/home/bi/git/memorial_env/src/templates/index.html",
+		"/home/bi/git/memorial_env/src/static/css/style.css",
+		"/home/bi/git/electest_env/src/static/css/style.css",
+		"/home/bi/git/electest_env/src/static/js/script.js",
+		"/home/bi/git/electest_env/src/templates/index.html",
+		"/home/bi/git/electest_env/src/templates/base.html",
+		"/home/bi/git/electest_env/src/core/views.py",
+		"/home/bi/git/electest_env/src/electest/urls.py",
+		"/home/bi/git/electest_env/src/electest/settings.py",
+		"/home/bi/git/electest_env/src/static/style.css",
+		"/home/bi/.config/sublime-text-3/Packages/Emmet/Default (Linux).sublime-keymap",
+		"/home/bi/git/sharman/models.py",
+		"/home/bi/git/djangolab/src/posts/templates/posts_list.html",
+		"/home/bi/git/djangolab/src/posts/admin.py",
+		"/home/bi/git/djangolab/src/core/templates/base.html",
+		"/home/bi/git/djangolab/src/posts/urls.py",
+		"/home/bi/git/graduate/base/models.py",
+		"/home/bi/git/horoshkov/admin.py",
+		"/home/bi/git/horoshkov/models.py",
+		"/home/bi/git/djangolab/src/posts/models.py",
+		"/home/bi/git/djangolab/src/core/models.py",
+		"/home/bi/git/djangolab/src/posts/templates/authors_list.html",
+		"/home/bi/git/djangolab/src/posts/views.py",
+		"/home/bi/git/djangolab/src/static/style.css",
+		"/home/bi/git/djangolab/src/djangolab/settings.py",
+		"/home/bi/git/djangolab/src/blog/templates/list.html",
+		"/home/bi/git/djangolab/src/core/templates/home.html",
+		"/home/bi/git/djangolab/src/djangolab/urls.py",
+		"/home/bi/git/djangolab/src/core/views.py",
+		"/home/bi/git/djangolab/src/blog/models.py",
+		"/home/bi/git/djangolab/src/blog/urls.py",
+		"/home/bi/git/djangolab/src/blog/views.py",
+		"/home/bi/git/servdesk_env/servdesk/incident/views.py",
+		"/home/bi/git/servdesk_env/servdesk/servdesk/urls.py",
+		"/home/bi/git/servdesk_env/servdesk/servdesk/settings.py",
+		"/home/bi/git/servdesk_env/servdesk/templates/incident_view.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/incident_new.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/login.html",
+		"/home/bi/git/servdesk_env/servdesk/static/css/style.css",
+		"/home/bi/git/servdesk_env/servdesk/templates/base.html",
+		"/home/bi/git/servdesk_env/servdesk/readme.txt",
+		"/home/bi/git/servdesk_env/servdesk/requirements.txt",
+		"/home/bi/git/servdesk_env/servdesk/templates/incident.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/registration_form.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/registration_complete.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/registration_closed.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/password_reset_form.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/password_reset_email.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/password_reset_done.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/password_reset_confirm.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/password_reset_complete.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/password_change_form.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/password_change_done.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/logout.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/activation_email_subject.txt",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/activation_email.txt",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/activation_complete.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/registration/activation.html",
+		"/home/bi/git/servdesk_env/servdesk/templates/success.html",
+		"/home/bi/git/servdesk_env/servdesk/incident/models.py",
+		"/home/bi/git/servdesk_env/servdesk/templates/incidents.html",
+		"/home/bi/git/servdesk/servdesk/templates/index.html",
+		"/home/bi/git/servdesk/servdesk/incident/forms.py",
+		"/home/bi/git/servdesk/servdesk/servdesk/settings.py",
+		"/home/bi/git/servdesk/servdesk/incident/models.py",
+		"/home/bi/git/servdesk/servdesk/templates/base.html",
+		"/home/bi/git/servdesk/servdesk/readme.txt",
+		"/home/bi/git/servdesk/servdesk/servdesk/urls.py",
+		"/home/bi/git/servdesk/servdesk/incident/views.py",
+		"/home/bi/git/servdesk/servdesk/incident/admin.py",
+		"/home/bi/git/servdesk/servdesk/templates/admin/base_site.html",
+		"/home/bi/git/servdesk/servdesk/incident/autocomplete_light_registry.py",
+		"/home/bi/git/graduate/base/views.py",
+		"/home/bi/Projects/graduate/graduate/urls.py",
+		"/home/bi/Projects/graduate/base/views.py",
+		"/home/bi/Projects/graduate/base/templates/content.html",
+		"/home/bi/Projects/graduate/static/css/style.css",
+		"/home/bi/Projects/graduate/base/templates/author.html",
+		"/home/bi/Projects/graduate/graduate/settings.py",
+		"/home/bi/Projects/graduate/base/models.py",
+		"/home/bi/Projects/graduate/base/admin.py",
+		"/home/bi/Projects/graduate/base/templates/base.html",
+		"/home/bi/Projects/graduate/static/admin/css/forms.css",
+		"/home/bi/Projects/graduate/static/css/admin/css/forms.css",
+		"/home/bi/Projects/graduate/base/templates/base2.html"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"all",
+			"endif",
+			"item-in-brand-corusel",
+			"container",
+			";\n",
+			"0",
+			"10",
+			"гд",
+			"5",
+			"di",
+			"h1",
+			"m",
+			"div",
+			"    <p><strong>Дата зачисления:</strong> {{ graduate.date }}</p>\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"carousel-item"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "labnote.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 268.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
