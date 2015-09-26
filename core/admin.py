@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Reactive, LabEquipment, Edition, Literature, Analysis, Synthesis, Stage
+from .models import *
 
 
 class HiddenField(admin.ModelAdmin):
@@ -18,6 +18,15 @@ class AnalysisAdmin(admin.ModelAdmin):
 	list_display = ['__unicode__']
 
 
+class AnalysisInline(admin.StackedInline):
+	model = Analysis
+	extra = 1
+
+
+class StageAdmin(admin.ModelAdmin):
+	inlines = [AnalysisInline,]
+
+
 class StageInline(admin.StackedInline):
 	model = Stage
 	extra = 1
@@ -32,5 +41,6 @@ admin.site.register(LabEquipment)
 admin.site.register(Edition, HiddenField)
 admin.site.register(Literature)
 admin.site.register(Analysis, HiddenField)
+admin.site.register(GroupSynthesis)
 admin.site.register(Synthesis, SynthesisAdmin)
 admin.site.register(Stage, HiddenField)

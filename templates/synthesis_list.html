@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block header %} Синтезы {% endblock %}
+
+{% block content %}
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<th>#</th>
+				<th>Опыт</th>
+				<th>Группа</th>
+				<th>Реактивы</th>
+				<th>Выход, %</th>
+				<th>Действия</th>
+			</thead>
+			<tbody>
+				{% for synth in synths %}
+					<tr>
+						<td>
+							<a href="{% url 'synthesis' synth.pk %}">
+								{{ synth.id }}
+							</a>
+						</td>
+						<td>{{ synth.date }}</td>
+						<td>{{ synth.group }}</td>
+						<td>
+							<ul>
+							{% for reactive in synth.reactives.all %}
+								<li>{{ reactive.iupac }}</li>
+							{% endfor %}
+							</ul>
+						</td>
+						<td>{{ synth.yield_percent }}</td>
+						<td>Редактировать или удалить</td>
+					</tr>
+				{% empty %}
+					<p>Вы не поставили еще ни одного синтеза</p>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}

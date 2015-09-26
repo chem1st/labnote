@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Marvin JS - How customize layout</title>
+	<link type="text/css" rel="stylesheet" href="../../css/doc.css" />
+	<link type="text/css" rel="stylesheet" href="../../js/lib/rainbow/github.css" />
+	<script src="../../js/lib/rainbow/rainbow-custom.min.js"></script>
+	<script src="../../js/lib/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+<h1>Marvin JS - How to customize layout</h1>
+<div style="clear: both; width: 100%; text-align: right;"><a href="../index.html">Back to index</a></div>
+
+<p>You can customize the toolbars of the editor by enumerating which items you would like to see there.
+You can specify the content of the following toolbars: <code>north</code>, <code>west</code>, <code>east</code>, <code>south</code> (this is their order of precedence).
+Each toolbar builds up from an array of toolbar groups.
+A toolbar group can be any JavaScript object that has the following properties:
+<table class="cell-border-vertical">
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><strong>items</strong></td>
+		<td>String array</td>
+		<td>items appear in this group (ignored if the <code>categories</code> field is specified)</td>
+	</tr>
+	<tr>
+		<td><strong>categories</strong></td>
+		<td>String array</td>
+		<td>resolve items by categories</td>
+	</tr>
+	<tr>
+		<td><strong>isFloating</strong></td>
+		<td>Boolean</td>
+		<td>It is an optional parameter. In default, its value is <code>false</code>. In this case, items are rendered as single buttons to the toolbar.
+		When its value is <code>true</code>, items appear in a popup panel. On the toolbar, a toggle button appears with the defaultItem.
+		Pressing the toggle button detaches a popup panel.</td>
+	</tr>
+	<tr>
+		<td><strong>defaultItem</strong></td>
+		<td>String</td>
+		<td>Optional parameter. This field is considered when <code>isFloating</code> is <code>true</code>. The selected item in the popup panel. Toggle button always shows the selected item.
+		If this parameter is not specified, the first item in the list will be selected in the popup panel at startup.</td>
+	</tr>
+</table>
+<p>The list of valid keys that you can use in the <code>items</code> and <code>categories</code> properties can be found in the <a href="../../items.html">corresponding document</a>.
+Categories is a pre-defined collection of items. So you can build up a toolbar group by using only category names. The following two definitions equals:
+<pre><code data-language="javascript">{ "categories": ["io",clipboard"] }</code></pre>
+<pre><code data-language="javascript">{ "items": ["open","save", "cut", "copy", "paste"] }</code></pre>
+</p>
+<p>After assembling the proper JavaScript object, you can call the <code>setDisplaySettings</code> function of the editor to set the new value of the toolbars.
+Example code:</p>
+<pre><code data-language="javascript">var toolbars = {
+	"north": [
+		{"categories": ["io"] },
+		{"categories": ["zoom"], "isFloating": true, "defaultItem": "zoomToFit" },
+		{"items": ["about"] }
+	],
+	"west": [
+		{"categories": ["select"], "isFloating": true, "defaultItem": "rectangleSelection"}
+	]
+};
+marvinSketcherInstance.setDisplaySettings({"toolbars": toolbars });
+</code></pre>
+<h3>Evaluation</h3>
+Parse each toolbar group.
+<ol>
+<li>Checks whether the <code>categories</code> property is defined and parses its value as a String array.</li>
+<li>Resolves each category by replacing category name to its definition. E.g.: <code>"io"</code> -> <code>["open", "save"]</code>. If a value in the <code>categories</code> array
+cannot be matched with a pre-defined category name, the value will be considered as an action item.</li>
+<li>If the <code>categories</code> property does not present, the <code>items</code> property is evaluated.</li>
+<li>By rendering the toolbar, those items appears on the toolbar that covers valid button ID. See the list of ID-s in the <a href="../../items.html">corresponding documentation</a>.
+If an item appears more than once in the toolbars configuration, only its first appearance will be displayed on the layout. E.g.:
+<pre><code data-language="javascript">"north": [
+ {"categories": ["io,clipboard"]}, 
+ {"categories": ["zoom"], "isFloating":true, "defaultItem": "zoomToFit"}
+]
+"west": [
+  {"items": ["rectangleSelection", "zoomToFit"] }
+]</code></pre>
+In the above configuration <code>zoomToFit</code> button will appearance only in the <code>zoom</code> menu on the <code>north</code> toolbar. Since its first occurrence is in the <code>zoom</code>
+menu. In this configuration, the <code>west</code> toolbar will contain only the <code>rectangleSelection</code> button.</li>
+</ol>
+
+<h3>Notes</h3>
+<p>To export the current toolbar layout, use the <code>getToolbars</code> function of the editor.</p>
+<pre><code data-language="javascript">var toolbars = marvinSketcherInstance.getToolbars();
+</code></pre>
+
+
+<div style="clear: both; width: 100%; text-align: right;"><a href="../index.html">Back to index</a></div>
+
+</body>
+
+</html>

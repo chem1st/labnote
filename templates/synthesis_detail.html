@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+
+{% block header %} Опыт # {{ synthesis.date|date:"dmY" }} {% endblock %}
+
+{% block content %}
+	<p class="lead">{{ synthesis.group.name }}</p>
+	<p>{{ synthesis.group.description }}</p>
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Р Е А К Ц И Я</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="tab-content col-md-12">
+			<ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a href="#reacts" aria-controls="reacts" role="tab" data-toggle="tab">Реагенты</a></li>
+			    <li role="presentation"><a href="#equip" aria-controls="equip" role="tab" data-toggle="tab">Материалы и оборудование</a></li>
+			    <li role="presentation"><a href="#lit" aria-controls="lit" role="tab" data-toggle="tab">Литература</a></li>
+			</ul>
+			<div role="tabpanel" class="tab-pane fade active in" id="reacts">
+				<table class="table table-striped">
+					<thead>
+						<th>Наименование</th>
+						<th>Брутто формула</th>
+						<th>Молярная масса, г/моль</th>
+						<th>Плотность, г/мл</th>
+						<th>Масса, г</th>
+					</thead>
+					<tbody>
+						{% for reactive in synthesis.reactives.all %}
+							<tr>
+								<td>{{ reactive.iupac }}</td>
+								<td>{{ reactive.formula }}</td>
+								<td>{{ reactive.mm }}</td>
+								<td>{{ reactive.density }}</td>
+								<td>{{ reactive.mm }} * 2</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="equip">
+				<table class="table table-striped">
+					<thead>
+						<th>Наименование</th>
+						<th>Количество, шт.</th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Колба коническая</td>
+							<td>1</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="lit">
+				<table class="table table-striped">
+					<thead>
+						<th>Издание</th>
+						<th>Название</th>
+						<th>Авторы</th>
+						<th>Ссылка</th>
+					</thead>
+					<tbody>
+						{% for lit in synthesis.group.literature.all %}
+							<tr>
+								<td>{{ lit.edition }}</td>
+								<td>{{ lit.title }}</td>
+								<td>{{ lit.author }}</td>
+								<td><a href="{{ lit.url }}">{{ lit.url }}</a></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Описание процесса</h2>
+			<div class="row">
+				{% for stage in synthesis.stages.all %}
+					<div class="col-md-2">
+						<p><u>{{ stage.date|date:"d.m.Y" }}</u></p>
+					</div>
+					<div class="col-md-10">
+						<table class="table table-striped">
+							<thead>
+								<th>Температура, С</th>
+								<th>Давление, мм.рт.ст.</th>
+								<th>Время начала</th>
+								<th>Время окончания</th>
+								<th>Выход на стадии</th>
+							</thead>
+							<tbody>
+								<td>{{ stage.t }}</td>
+								<td>{{ stage.p }}</td>
+								<td>{{ stage.start }}</td>
+								<td>{{ stage.end }}</td>
+								<td>{{ stage.yield_percent }} %</td>
+							</tbody>
+						</table>
+						<div class="row">
+							<div class="col-md-9">
+								{{ stage.description }}
+							</div>
+							<div class="col-md-3">
+								<p>Анализы</p>
+							</div>
+						</div>
+					</div>
+				{% empty %}
+					<p>Еще не указано ни одной стадии процесса.</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

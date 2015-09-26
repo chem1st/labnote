@@ -12,6 +12,7 @@ class Reactive(models.Model):
 	formula = models.CharField(u'Брутто формула', max_length=50)
 	img = models.ImageField(u'Графическое изображение', blank=True)
 	mm = models.FloatField(u'Молярная масса, г/моль')
+	density = models.FloatField(u'Плотность, г/мл')
 	appearance = models.CharField(u'Внешний вид', max_length=150, blank=True)
 	mp = models.SmallIntegerField(u'Температура плавления, С', blank=True, null=True)
 	bp = models.SmallIntegerField(u'Температура кипения, С', blank=True, null=True)
@@ -63,7 +64,7 @@ class Edition(models.Model):
 class Literature(models.Model):
 	edition = models.ForeignKey(Edition, verbose_name='Издание')
 	title = models.CharField(u'Название', max_length=300)
-	author = models.CharField(u'Автор', max_length=100)
+	author = models.CharField(u'Автор(ы)', max_length=100)
 	url = models.URLField(blank=True)
 
 	def __unicode__(self):
@@ -75,18 +76,33 @@ class Literature(models.Model):
 		verbose_name_plural = 'Литература'
 
 
+class GroupSynthesis(models.Model):
+	name = models.CharField(u'Наименование', max_length=100)
+	description = models.TextField(u'Описание (макс. 1000 символов)', max_length=1000)
+	tags = models.CharField(u'Теги', max_length=500, blank=True)
+	literature = models.ManyToManyField(Literature, verbose_name='Литература', blank=True)
+
+	def __unicode__(self):
+		return self.name
+
+	class Meta:
+		verbose_name = 'Группа'
+		verbose_name_plural = 'Группы синтезов'
+
+
 class Synthesis(models.Model):
 	date = models.DateField(u'Дата синтеза')
+	group = models.ForeignKey(GroupSynthesis, verbose_name='Группа', blank=True)
 	description = models.TextField(u'Описание (макс. 1000 символов)', max_length=1000, blank=True)
-	products = models.ManyToManyField(Reactive, verbose_name='Продукты')   #through!!!
+	reactives = models.ManyToManyField(Reactive, verbose_name='Реактивы')   #through!!!
 	tags = models.CharField(u'Теги', max_length=500, blank=True)
-	literature = models.ManyToManyField(Literature, verbose_name='Литература')
+	literature = models.ManyToManyField(Literature, verbose_name='Литература', blank=True)
 	yield_percent = models.IntegerField(
 		validators=[MinValueValidator(0), MaxValueValidator(100)], 
 		verbose_name='Выход целевого продукта, %')
 
 	def __unicode__(self):
-		return str(self.date)
+		return u'Опыт %s' % str(self.date)
 
 	class Meta:
 		ordering = ['-date']
